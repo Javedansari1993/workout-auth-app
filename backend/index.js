@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/', (res,req)=>{
-  res.status(200).json({mssg: 'landing page add /api/user after the url'})
+  res.json({mssg: 'landing page add /api/user after the url'})
 })
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
