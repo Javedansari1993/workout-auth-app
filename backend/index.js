@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 const express = require('express')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
@@ -17,9 +16,9 @@ app.use((req, res, next) => {
 })
 
 // routes
-app.use('/', (res,req)=>{
-  res.json({mssg: 'landing page add /api/user after the url'})
-})
+app.get('/', function (req, res) {
+	res.send('landing page add /api/workouts for workout and login/signup  /api/user after the URl');
+});
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 // connect to db
