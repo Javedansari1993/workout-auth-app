@@ -11,7 +11,7 @@ const WorkoutForm = () => {
   const [emptyFields, setEmptyFields] = useState([])
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault() 
 
     const workout = {title, load, reps}
 

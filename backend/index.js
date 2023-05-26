@@ -19,11 +19,11 @@ app.use((req, res, next) => {
 app.use('/api/workouts', workoutRoutes)
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI || "mongodb+srv://javedansari:javed1993@cluster0.lqey4nb.mongodb.net/workout-auth")
   .then(() => {
     // listen for requests
     app.listen(process.env.PORT, () => {
-      console.log('connected to db & listening on port', process.env.PORT)
+      console.log('connected to db & listening on port', process.env.PORT || 4000)
     })
   })
   .catch((error) => {
